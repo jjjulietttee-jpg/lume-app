@@ -45,7 +45,7 @@ footer{max-width:880px;margin:0 auto;padding:0 20px 36px;color:var(--soft);font-
 <li>Your location (the app does not ask for it)</li><li>Contacts, microphone, health data</li>
 <li>Your collection, notes and prices paid</li><li>Advertising or analytics SDKs</li></ul></div></div>
 <h2>The photo trip</h2>
-<p>A reading sends one JPEG over HTTPS to a relay function we operate on Google Cloud. The relay passes it on to OpenAI's image model along with a request for likely watch references, and returns the result. Nothing is saved by the relay; its logs hold failure codes only. While OpenAI processes the image, its API terms apply.</p>
+<p>A reading sends one JPEG over HTTPS to a relay service we operate on Cloudflare Workers. The relay passes it through Replicate to OpenAI's image model along with a request for likely watch references, and returns the result. Nothing is saved by the relay; its logs hold failure codes only. While OpenAI processes the image, its API terms apply.</p>
 <h2>What stays at home</h2>
 <p>The collection (owned and wanted watches, notes, price paid, acquisition and service dates, wear days), the reading history, and the photo files are kept in a database and folder inside Lume's sandbox. Whether they ride along in an iPhone backup depends on your own backup settings.</p>
 <h2>Permissions</h2>
