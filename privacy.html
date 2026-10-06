@@ -1,84 +1,61 @@
 <!doctype html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Lume</title>
-<style>
-  :root { color-scheme: light dark; }
-  body {
-    margin: 0 auto; padding: 40px 20px 80px; max-width: 720px;
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #14181a; background: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    body { color: #eceef2; background: #070b12; }
-    a { color: #7ce7be; }
-    h1, h2 { color: #f5f6f8; }
-    .note { background: #101724; border-color: #1e2838; }
-  }
-  h1 { font-size: 28px; letter-spacing: -.02em; margin: 0 0 6px; }
-  h2 { font-size: 19px; margin: 32px 0 8px; }
-  .meta { color: #6d737c; font-size: 14px; margin-bottom: 28px; }
-  a { color: #157a5b; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  .note {
-    background: #f4f5f6; border: 1px solid #dcdfe3; border-radius: 10px;
-    padding: 14px 18px; margin: 20px 0;
-  }
-</style>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data | Lume</title><meta name="description" content="What data Lume handles and where it goes."><style>
+:root{--bg:#f4f2ed;--sunk:#e8e5de;--card:#fff;--ink:#14161a;--soft:#5b6068;--rule:rgba(20,22,26,.14);--acc:#0d7a57;--hero:#0a0c0b;--heroink:#f4f2ed;--mint:#7ce7be}
+@media (prefers-color-scheme:dark){:root{--bg:#0a0c0b;--sunk:#141917;--card:#171d1a;--ink:#f1efe9;--soft:#a3aaa6;--rule:rgba(241,239,233,.16);--acc:#7ce7be;--hero:#000;--heroink:#f1efe9}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+header{background:var(--hero);color:var(--heroink);padding:0 20px}
+header div{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:22px;flex-wrap:wrap;padding:16px 0}
+header strong{font:800 22px -apple-system,"SF Pro Display",sans-serif;letter-spacing:-.02em;margin-right:auto}
+header strong i{color:var(--mint);font-style:normal}
+header a{color:var(--heroink);opacity:.7;text-decoration:none;font-size:14px}
+header a.on{opacity:1;color:var(--mint)}
+main{max-width:880px;margin:0 auto;padding:44px 20px 70px}
+h1{font:800 clamp(34px,6vw,56px)/1.04 -apple-system,"SF Pro Display",sans-serif;letter-spacing:-.03em;margin:0 0 12px}
+.lede{font-size:19px;color:var(--soft);max-width:640px;margin:0 0 34px}
+h2{font:700 22px -apple-system,"SF Pro Display",sans-serif;margin:42px 0 10px;padding-top:14px;border-top:1px solid var(--rule)}
+table.spec{width:100%;border-collapse:collapse;background:var(--card);border-radius:10px;overflow:hidden;margin:12px 0}
+.spec th,.spec td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule);font-size:15px}
+.spec th{background:var(--sunk);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--soft)}
+.spec td:first-child{font-weight:700;width:34%}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.two div{background:var(--card);border-radius:10px;padding:16px 18px;border-top:4px solid var(--acc)}
+.two div.no{border-top-color:var(--soft)}
+.two h3{margin:0 0 6px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.two .no h3{color:var(--soft)}
+.two ul{margin:0;padding-left:18px}
+.stamp{display:inline-block;border:1.5px solid var(--acc);color:var(--acc);border-radius:4px;padding:1px 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+dl.qa dt{font-weight:700;margin-top:20px}
+dl.qa dd{margin:4px 0 0;color:var(--soft)}
+a{color:var(--acc)}
+ol.cl{counter-reset:c;list-style:none;padding:0}
+ol.cl li{counter-increment:c;position:relative;padding:12px 0 12px 54px;border-bottom:1px solid var(--rule)}
+ol.cl li:before{content:counter(c,upper-roman);position:absolute;left:0;top:12px;font-weight:800;color:var(--acc);width:44px}
+footer{max-width:880px;margin:0 auto;padding:0 20px 36px;color:var(--soft);font-size:13px}
+@media(max-width:620px){.two{grid-template-columns:1fr}.spec td:first-child{width:auto}}
+</style></head>
+<body><header><div><strong>Lu<i>m</i>e</strong><a href="index.html">Overview</a><a href="support.html">Help</a><a href="privacy.html" class=on>Data</a><a href="terms.html">Terms</a></div></header>
+<main><h1>Data</h1><p class="lede">What Lume touches, what it leaves alone, and the one network trip a photo makes.</p>
 
-<h1>Privacy Policy</h1>
-<p class="meta">Lume · Last updated September 7, 2026</p>
-
-<p>Lume identifies wristwatches from a photo. This page says plainly what
-happens to that photo and to everything else the app holds.</p>
-
-<h2>The photo you take</h2>
-<p>To name a watch, Lume sends the picture to its identification service. This
-is the one thing that leaves your phone, and it only happens when you ask for an
-identification.</p>
-<ul>
-  <li>The image is resized before it is sent and is used only to produce the answer.</li>
-  <li>It is not kept after the answer is returned, and it is not used to train anything.</li>
-  <li>No name, email, account or device identifier is attached to it. We do not
-      have accounts, and Lume never asks you to create one.</li>
-  <li>The reference book, the marking checks, the engraving search and everything already in your collection
-      work with no network at all.</li>
-</ul>
-
-<h2>Your collection</h2>
-<p>Watches you keep — the photo, the name, the date, your notes and the place
-you typed — are stored <strong>on your device only</strong>. They are not
-uploaded, not backed up to us, and not visible to anyone but you. Deleting a
-watch deletes its photo from the device. Deleting the app deletes all of it.</p>
-
-<h2>What Lume does not do</h2>
-<ul>
-  <li>No advertising, and no advertising SDKs.</li>
-  <li>No analytics or tracking SDKs. Lume does not use the advertising
-      identifier (IDFA) and shows no App Tracking Transparency prompt, because
-      it has nothing to track you with.</li>
-  <li>No location access. If you want to record where a watch came from, you
-      type it in; the app never reads your position.</li>
-  <li>No access to your contacts, calendar, microphone or health data.</li>
-</ul>
-
-<h2>The photo library</h2>
-<p>If you choose a picture instead of taking one, iOS hands Lume only the
-picture you picked. The app cannot browse your library.</p>
-
-<h2>Subscriptions</h2>
-<p>Lume Pro is sold through Apple's In-App Purchase. Apple processes the
-payment and tells the app whether the subscription is active. We never see your
-card, your Apple Account, or your billing address.</p>
-
-<h2>Children</h2>
-<p>Lume is not directed at children under 13 and collects nothing that would
-identify anyone of any age.</p>
-
-<h2>Changes</h2>
-<p>If this policy changes, the date at the top changes with it.</p>
-
-<h2>Contact</h2>
-<p>Questions about any of the above: <a href="mailto:nastya.shchaveleva@internet.ru">nastya.shchaveleva@internet.ru</a>.</p>
+<div class="two"><div><h3>What we touch</h3><ul>
+<li>The photo you submit for a reading</li>
+<li>Your purchase receipt, via Apple's StoreKit</li></ul></div>
+<div class="no"><h3>What we never touch</h3><ul>
+<li>Your location (the app does not ask for it)</li><li>Contacts, microphone, health data</li>
+<li>Your collection, notes and prices paid</li><li>Advertising or analytics SDKs</li></ul></div></div>
+<h2>The photo trip</h2>
+<p>A reading sends one JPEG over HTTPS to a relay function we operate on Google Cloud. The relay passes it on to OpenAI's image model along with a request for likely watch references, and returns the result. Nothing is saved by the relay; its logs hold failure codes only. While OpenAI processes the image, its API terms apply.</p>
+<h2>What stays at home</h2>
+<p>The collection (owned and wanted watches, notes, price paid, acquisition and service dates, wear days), the reading history, and the photo files are kept in a database and folder inside Lume's sandbox. Whether they ride along in an iPhone backup depends on your own backup settings.</p>
+<h2>Permissions</h2>
+<table class="spec"><tr><th>Permission</th><th>Used for</th></tr>
+<tr><td>Camera</td><td>Photographing a watch to identify it</td></tr>
+<tr><td>Photo library</td><td>Reading a picture you pick; no browsing of the rest</td></tr></table>
+<h2>Payments</h2>
+<p>Lume talks to the App Store directly through StoreKit. Apple holds the payment details; we see only whether a plan is active. There is no Lume account and no email collected in the app.</p>
+<h2>Deleting</h2>
+<p>Remove one watch by swiping it away or using delete on its page; the photo is removed with it. Remove everything by deleting the app. If you have a question we cannot answer here, write to <a href="mailto:nastya.shchaveleva@internet.ru">nastya.shchaveleva@internet.ru</a>.</p>
+<h2>Kids and changes</h2>
+<p>Lume is not aimed at children under 13. Material changes will move the date in the page footer.</p></main>
+<footer>Lume: Watch Identifier &amp; Value. Mail nastya.shchaveleva@internet.ru. Updated October 6, 2026.</footer></body></html>
